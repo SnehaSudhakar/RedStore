@@ -297,8 +297,11 @@ footer p {
     }
 
     .col-2 img {
-        max-width: 485px;
+        /* max-width: 350px;
+        margin-top: 40px; */
+        max-width: 350px;
         margin-top: 40px;
+        padding: 15px;
     }
 
     /* Footer --------------------------------------*/
