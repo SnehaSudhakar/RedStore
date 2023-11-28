@@ -1,0 +1,303 @@
+:root {
+    --hue-color: 365;
+    --theme-secondary: hsl(var(--hue-color), 69%, 61%);
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    overflow-x: hidden;
+}
+
+/* Navigation bar */
+nav {
+    background-color: white;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 0px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav img {
+    margin-left: 50px;
+}
+
+nav ul li {
+    list-style-type: none;
+    display: inline-block;
+    margin: 0px 5px;
+}
+
+nav li a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+a:hover,
+a.active {
+    color: var(--theme-secondary);
+}
+
+#carticon {
+    width: 25px;
+    margin-right: 5px;
+}
+
+nav #menu {
+    font-size: 25px;
+    display: none;
+}
+
+
+/* End of navigation bar */
+
+/* Head */
+.select-head {
+    width: 100%;
+    position: relative;
+    top: 100px;
+}
+
+.head-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 230px;
+}
+
+/* End of head */
+
+/* Product list */
+.product-list {
+    position: relative;
+    top: 110px;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+}
+
+.col-4 {
+    margin: 20px;
+}
+
+.col-4:hover {
+    transform: translateY(-5px);
+}
+
+.col-4 img {
+    width: 100%;
+    height: 310px;
+}
+
+/* End of product list */
+
+/* Page nav */
+.next-page {
+    display: flex;
+    justify-content: flex-start;
+    margin: 50px 0;
+}
+
+.pagination {
+    display: inline-block;
+    padding: 40px 0px;
+    margin-left: 233px;
+}
+
+.pagination a {
+    padding: 10px 20px;
+    border: 1px solid var(--theme-secondary);
+    color: black;
+    text-decoration: none;
+}
+
+.pagination a:hover {
+    background-color: var(--theme-secondary);
+}
+
+/* End of Page nav */
+
+/* Footer --------------------------------------*/
+footer {
+    background-color: black;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    padding: 30px 0;
+}
+
+footer h3 {
+    padding: 10px 0;
+}
+
+footer p {
+    padding: 10px 0;
+}
+
+.foot-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footcol-1,
+.footcol-2,
+.footcol-3,
+.footcol-4 {
+    padding: 15px;
+    margin: 1px 25px;
+}
+
+.ftimg {
+    width: 300px;
+    margin: auto;
+}
+
+.ftimg img {
+    width: 140px;
+    height: 40px;
+}
+
+#footlogo {
+    width: 165px;
+    padding: 26px;
+}
+
+.footcol-3 li,
+.footcol-4 li {
+    list-style: none;
+    margin-bottom: 5px;
+}
+
+.footcol-3 a,
+.footcol-4 a {
+    color: #fff;
+    text-decoration: none;
+    font-size: small;
+}
+
+/* End of links----------------- */
+
+/* copyright -------------------*/
+.foot-2 {
+    width: 100%;
+    margin-top: 5px;
+    display: block;
+}
+
+.foot-2 hr {
+    background-color: #fff;
+    width: 85%;
+    margin: auto;
+}
+
+.foot-2 a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* End of copyright ------------*/
+/* End of footer */
+/* --------------------------------------------------------MEDIA QUERIES--------------------------------------------------------- */
+
+@media (width<576px) {
+
+    /* Navigation ----------------------------------*/
+    nav {
+        flex-wrap: wrap;
+    }
+
+    nav ul {
+        width: 100%;
+        border-radius: 10px;
+        position: absolute;
+        top: 55px;
+        left: 0;
+        right: 0;
+        background-color: black;
+        overflow: hidden;
+        transition: 0.3s;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 15px 0;
+        text-align: center;
+    }
+
+    nav ul li a {
+        color: white;
+    }
+
+    nav #menu {
+        display: block;
+        cursor: pointer;
+    }
+
+    /* End of navbar -------------------------------*/
+    /* Head */
+    .select-head {
+        margin: 10px 0;
+    }
+
+    .head-list {
+        margin: 0px 20px;
+    }
+
+    /* End of head */
+    /* Product list */
+    .row {
+        flex-direction: column;
+    }
+
+    .col-4 img {
+        height: 400px;
+    }
+
+    /* End of product list */
+    /* Page nav */
+    .next-page {
+        margin: 50px 0;
+    }
+
+    .pagination {
+        margin-left: 25px;
+    }
+
+    /* End of Page nav */
+    /* Footer --------------------------------------*/
+
+    .foot-1 {
+        flex-direction: column;
+    }
+
+    .footcol-1,
+    .footcol-2,
+    .footcol-3,
+    .footcol-4 {
+        min-width: 250px;
+        margin-bottom: 10px;
+    }
+
+    .ftimg img {
+        width: 200px;
+    }
+
+    /* End of links----------------- */
+    /* End of Footer ------------------------------------*/
+}

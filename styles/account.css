@@ -1,0 +1,324 @@
+/* pseudo selector */
+:root {
+    --hue-color: 365;
+    --theme-secondary: hsl(var(--hue-color), 69%, 61%);
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* Navigation bar */
+nav {
+    background-color: white;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 0px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav img {
+    margin-left: 50px;
+}
+
+nav ul li {
+    list-style-type: none;
+    display: inline-block;
+    margin: 0px 5px;
+}
+
+nav li a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+a:hover,
+a.active {
+    color: var(--theme-secondary);
+}
+
+#carticon {
+    width: 25px;
+    margin-right: 5px;
+}
+
+nav #menu {
+    font-size: 25px;
+    display: none;
+}
+
+
+/* End of navigation bar */
+
+.accounts {
+    background: radial-gradient(white, pink);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.col-2 {
+    flex-basis: 50%;
+}
+
+.col-2 img {
+    max-width: 100%;
+    padding: 50px;
+}
+
+.form-box {
+    width: 350px;
+    height: 450px;
+    margin: 5% auto;
+    background: #fff;
+    box-shadow: 5px 9px 15px 2px rgb(56, 53, 53);
+    overflow: hidden;
+    position: relative;
+}
+
+.buttonfield {
+    width: 100%;
+    height: 50px;
+    margin: 10px auto 5px auto;
+}
+
+#logregbtn {
+    background: transparent;
+    font-size: medium;
+    font-weight: bold;
+    border: none;
+    margin: 5px 26px;
+    padding: 10px 30px;
+    outline: none;
+
+    cursor: pointer;
+}
+
+#toggle-line {
+    width: 170px;
+    height: 5px;
+    background-color: var(--theme-secondary);
+    border: none;
+    transition: transform 0.5s;
+    /* transform: translateX(170px); */
+}
+
+.form-box form {
+    max-width: 300px;
+    margin: 0 auto;
+    /* padding: 0 10px; */
+    position: absolute;
+    top: 120px;
+    transition: transform 0.5s;
+}
+
+#Loginform {
+    left: -340px;
+}
+
+#Registerform {
+    position: absolute;
+    left: 0px;
+}
+
+.inputfield {
+    width: 300px;
+    height: 275px;
+}
+
+.inputbox {
+    width: 100%;
+    height: 40px;
+    margin: 10px 25px;
+    outline: none;
+    text-align: center;
+}
+
+.submit {
+    width: 85%;
+    height: 35px;
+    margin: 22px 48px;
+    background-color: var(--theme-secondary);
+    color: white;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.submit:hover {
+    background-color: brown;
+}
+
+#forgot {
+    text-decoration: none;
+    color: black;
+    margin-top: 10px;
+    margin-left: 115px;
+    font-size: small;
+}
+
+/* Footer --------------------------------------*/
+footer {
+    background-color: black;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    padding: 30px 0;
+}
+
+footer h3 {
+    padding: 10px 0;
+}
+
+footer p {
+    padding: 10px 0;
+}
+
+.foot-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footcol-1,
+.footcol-2,
+.footcol-3,
+.footcol-4 {
+    padding: 15px;
+    margin: 1px 25px;
+}
+
+.ftimg {
+    width: 300px;
+    margin: auto;
+}
+
+.ftimg img {
+    width: 140px;
+    height: 40px;
+}
+
+#footlogo {
+    width: 165px;
+    padding: 26px;
+}
+
+.footcol-3 li,
+.footcol-4 li {
+    list-style: none;
+    margin-bottom: 5px;
+}
+
+.footcol-3 a,
+.footcol-4 a {
+    color: #fff;
+    text-decoration: none;
+    font-size: small;
+}
+
+/* End of links----------------- */
+
+/* copyright -------------------*/
+.foot-2 {
+    width: 100%;
+    margin-top: 5px;
+    display: block;
+}
+
+.foot-2 hr {
+    background-color: #fff;
+    width: 85%;
+    margin: auto;
+}
+
+.foot-2 a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* End of copyright ------------*/
+/* End of footer */
+
+/* --------------------------------------------------------MEDIA QUERIES--------------------------------------------------------- */
+
+@media (width<576px) {
+
+    /* Navigation ----------------------------------*/
+    nav {
+        flex-wrap: wrap;
+    }
+
+    nav ul {
+        width: 100%;
+        border-radius: 10px;
+        position: absolute;
+        top: 55px;
+        left: 0;
+        right: 0;
+        background-color: black;
+        overflow: hidden;
+        transition: 0.3s;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 15px 0;
+        text-align: center;
+    }
+
+    nav ul li a {
+        color: white;
+    }
+
+    nav #menu {
+        display: block;
+        cursor: pointer;
+    }
+
+    /* End of navbar -------------------------------*/
+    .col-2 {
+        flex-basis: 100%;
+    }
+
+    .col-2 img {
+        max-width: 485px;
+        margin-top: 40px;
+    }
+
+    /* Footer --------------------------------------*/
+
+    .foot-1 {
+        flex-direction: column;
+    }
+
+    .footcol-1,
+    .footcol-2,
+    .footcol-3,
+    .footcol-4 {
+        min-width: 250px;
+        margin-bottom: 10px;
+    }
+
+    .ftimg img {
+        width: 200px;
+    }
+
+    /* End of links----------------- */
+    /* End of Footer ------------------------------------*/
+}
