@@ -45,8 +45,8 @@
             <div class="col-2">
                 <div class="form-box">
                     <div class="buttonfield">
-                        <button type="button" id="logregbtn" onclick()="log()">Login</button>
-                        <button type="button" id="logregbtn" onclick()="reg()">Register</button>
+                        <button type="button" id="logregbtn" onclick="log()">Login</button>
+                        <button type="button" id="logregbtn" onclick="reg()">Register</button>
                     </div>
                     <hr id="toggle-line">
                     <!-- Login Form -->
@@ -131,20 +131,21 @@
 
         // Form toggle
 
-        // var Login = document.getElementById("Loginform");
-        // var Register = document.getElementById("Registerform");
-        // var Toggleline = document.getElementById("toggle-line");
+        var Login = document.getElementById("Loginform");
+        var Register = document.getElementById("Registerform");
+        var Toggleline = document.getElementById("toggle-line");
 
-        // function log() {
-        //     Login.style.transform = "translateX(0px)";
-        //     Register.style.transform = "translateX(0px)";
-        //     Toggleline.style.transform = "translateX(0px)";
-        // }
-        // function reg() {
-        //     Register.style.transform = "translateX(340px)";
-        //     Login.style.transform = "translateX(340px)";
-        //     Toggleline.style.transform = "translateX(170px)";
-        // }
+        function log() {
+            Register.style.transform = "translateX(340px)";
+            Login.style.transform = "translateX(340px)";
+            Toggleline.style.transform = "translateX(0px)";
+        }
+        function reg() {
+
+            Login.style.transform = "translateX(0px)";
+            Register.style.transform = "translateX(0px)";
+            Toggleline.style.transform = "translateX(170px)";
+        }
 
     </script>
 </body>

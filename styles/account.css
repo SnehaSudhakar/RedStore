@@ -49,6 +49,7 @@
     height: 5px;
     background-color: var(--theme-secondary);
     border: none;
+    border-radius: 30px;
     transition: transform 0.5s;
     /* transform: translateX(170px); */
 }
@@ -106,6 +107,7 @@
     margin-top: 10px;
     margin-left: 115px;
     font-size: small;
+    cursor: pointer;
 }
 
 /* --------------------------------------------------------MEDIA QUERIES--------------------------------------------------------- */
